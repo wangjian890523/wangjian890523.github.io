@@ -7,18 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content>
+    <meta name="description" content="八线程序员">
     <meta name="keyword" content>
     <link rel="shortcut icon" href="/img/ironman-draw.png">
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          Use hexo build a blog system - Beantech | 豆科技
+          Use hexo build a blog system - Eight-Linepg | 我思故我在
         
     </title>
 
-    <link rel="canonical" href="http://yoursite-url/2019/02/16/Use-hexo-build-a-blog-system/">
+    <link rel="canonical" href="https://wangjian890523.github.io/2019/02/16/Use-hexo-build-a-blog-system/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -69,13 +69,13 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('')
+            background-image: url('img/header_img/home_bg.png')
             /*post*/
         
     }
     
     #signature{
-        background-image: url('/img/signature/BeanTechSign-white.png');
+        background-image: url('/img/signature/BeanTechSign-white.jpg');
     }
     
 </style>
@@ -90,11 +90,17 @@
                     <div class="post-heading">
                         <div class="tags">
                             
+                              <a class="tag" href="/tags/#Blog" title="Blog">Blog</a>
+                            
+                              <a class="tag" href="/tags/#Hexo" title="Hexo">Hexo</a>
+                            
+                              <a class="tag" href="/tags/#Github" title="Github">Github</a>
+                            
                         </div>
                         <h1>Use hexo build a blog system</h1>
-                        <h2 class="subheading"></h2>
+                        <h2 class="subheading">Github + Hexo 搭建博客环境</h2>
                         <span class="meta">
-                            Posted by John Doe on
+                            Posted by eight_linepg on
                             2019-02-16
                         </span>
                     </div>
@@ -119,7 +125,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">Your Title</a>
+            <a class="navbar-brand" href="/">Eight-LinePG</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -150,6 +156,13 @@
                         
                         <li>
                             <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/bbs/">BBS</a>
                         </li>
                         
                     
@@ -212,7 +225,105 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h1 id="ssh-密钥问题"><a href="#ssh-密钥问题" class="headerlink" title="ssh 密钥问题"></a>ssh 密钥问题</h1><p><img src="https://i.imgur.com/7YEzwvq.jpg" alt></p>
+                <div align="middle">
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=103730&auto=1&height=66"></iframe>
+</div>
+<h3><span id="主要内容">主要内容</span></h3>
+<ul>
+<li>搭建自己好用省钱的博客环境，记录工作学习中的知识点。</li>
+<li>简化从博客写作到本地展示的工作。</li>
+<li>分成介绍，安装，使用，优化几个模块。</li>
+</ul>
+<h1><span id="1介绍">1.介绍</span></h1>
+<ul>
+<li>github + hexo</li>
+<li><a href="https://github.com" target="_blank" rel="noopener">github</a></li>
+</ul>
+<blockquote>
+<p>github就不用记录了</p>
+</blockquote>
+<ul>
+<li><a href="https://hexo.io" target="_blank" rel="noopener">hexo</a></li>
+</ul>
+<blockquote>
+<p>Hexo是高效的静态站点生成框架，它基于Node.js, 通过Hexo。你可以直接使用Markdown语法来撰写博客。</p>
+</blockquote>
+<h1><span id="2安装步骤">2.安装步骤</span></h1>
+<h2><span id="21-github-配置流程">2.1 github 配置流程</span></h2>
+<h2><span id="22-hexo-安装">2.2 hexo 安装</span></h2>
+<h2><span id="23-基础插件">2.3 基础插件</span></h2>
+<h3><span id="添加图片放大功能">添加图片放大功能</span></h3>
+<ul>
+<li>使用zooming.js 实现图片的放大功能</li>
+<li>zooming.js 文件放在blog\themes\beantech\source\js目录下。</li>
+<li>打开blog\themes\beantech\layout\post.ejs，在最后添加代码。</li>
+</ul>
+ <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"/js/zooming.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>然后文章里的图片就可以单击全屏了。</li>
+</ul>
+<h3><span id="添加留言板">添加留言板</span></h3>
+<ul>
+<li>在blog\themes\beantech\layout中新建bbs.ejs, 文件内容如下：</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">layout: page</span><br><span class="line">---</span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">    header.intro-header&#123;</span></span><br><span class="line"><span class="undefined">        background-position: right; </span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- Chinese Version --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"zh post-container"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">%-</span> <span class="attr">page.content</span> %&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>在blog/source 中新建bbs文件夹，里面再新建index.md文件，内容如下：</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">layout: "bbs"</span><br><span class="line">title: "BBS"</span><br><span class="line">date: 2017-09-19 12:48:33</span><br><span class="line">description: "欢迎交换友链，一起交流学习！"</span><br><span class="line">header-img: "img/header_img/home-bg-2-dark.png"</span><br><span class="line">comments: true</span><br><span class="line">---</span><br><span class="line">此处替换为你的畅言评论代码~~~</span><br></pre></td></tr></table></figure>
+<h3><span id="增加置顶功能">增加置顶功能</span></h3>
+<ul>
+<li>运行如下两条命令安装置顶插件</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">uninstall</span> hexo-generator-<span class="keyword">index</span> <span class="comment">--save</span></span><br><span class="line">npm <span class="keyword">install</span> hexo-generator-<span class="keyword">index</span>-pin-top <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>添加代码到 blog\themes\beantech\layout\index.ejs, 如下位置添加代码：<br>
+<img src="https://i.imgur.com/ls3Lfkl.jpg" alt></li>
+</ul>
+<figure class="highlight erb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">%</span></span></span><span class="ruby"> <span class="keyword">if</span> (post.top) &#123;</span><span class="xml"><span class="tag">%&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-thumb-tack"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">7D26CD</span>&gt;</span>置顶<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-meta-divider"</span>&gt;</span>|<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">%</span></span></span><span class="ruby">&#125;</span><span class="xml"><span class="tag">%&gt;</span></span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>在想要置顶的文件md文件中，添加如下配置选项：</li>
+</ul>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">top:</span><span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<h3><span id="添加网易云音乐bgm">添加网易云音乐BGM</span></h3>
+<p>听着音乐写作再好不过了，把网易搬到博客真的很不错。</p>
+<ul>
+<li>网易云生成想听歌曲的外链。</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">frameborder</span>=<span class="string">"no"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">marginwidth</span>=<span class="string">"0"</span> <span class="attr">marginheight</span>=<span class="string">"0"</span> <span class="attr">width</span>=<span class="string">330</span> <span class="attr">height</span>=<span class="string">86</span> <span class="attr">src</span>=<span class="string">"//music.163.com/outchain/player?type=2&amp;id=103730&amp;auto=1&amp;height=66"</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>效果图<br>
+<img src="https://i.imgur.com/g5NgKNu.jpg" alt></p>
+<p>现在可以愉快的工作了！！！</p>
+<h3><span id="添加访客人数和数字统计">添加访客人数和数字统计</span></h3>
+<h1><span id="3使用">3.使用</span></h1>
+<hr>
+<h2><span id="常用指令">常用指令</span></h2>
+<ul>
+<li>hexo clean 删除本地静态文件（Public目录），可不执行</li>
+<li>hexo g 生成本地静态文件（Public目录）</li>
+<li>hexo deploy 将本地静态文件推送至github（hexo d）</li>
+</ul>
+<h2><span id="step-by-step">step by step</span></h2>
+<h1><span id="4优化">4.优化</span></h1>
+<hr>
+<h2><span id="自定义hexo-new-生成的md-选项">自定义Hexo new 生成的md 选项</span></h2>
+<p>在Blog\scaffolds\<a href="http://postd.md" target="_blank" rel="noopener">postd.md</a> 文件中添加</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">subtitle:</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">author: &#123;&#123; author &#125;&#125; </span><br><span class="line">catalog: true</span><br><span class="line">header-img:</span><br><span class="line">tags:</span><br><span class="line">categories:</span><br><span class="line">top:</span><br><span class="line">copyright:</span><br><span class="line"></span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>top 置顶文章<br>
+tags 标签<br>
+copyright 版权<br>
+categories 分类</p>
+</blockquote>
+<h2><span id="添加小红星">添加小红星</span></h2>
+<ul>
+<li>下载 <a href="https://github.com/Neveryu/Neveryu.github.io/blob/master/js/src/love.js" target="_blank" rel="noopener">love.js</a>, 并把这个js 文件放到 Blog\themes\beantech\source\js 的这个目录下面。</li>
+<li>修改themes 下配置文件Blog\themes\beantech\layout\layout.ejs如下：<br>
+<img src="https://i.imgur.com/buizSl1.jpg" alt></li>
+<li>效果展示：<br>
+<img src="https://i.imgur.com/XY0jVry.gif" alt></li>
+</ul>
+<h2><span id="heading-2">Heading 2</span></h2>
 
                 
 
@@ -220,10 +331,10 @@
                 <!-- Pager -->
                 <ul class="pager">
                     
-                    
-                        <li class="next">
-                            <a href="/2019/02/16/hello-world/" data-toggle="tooltip" data-placement="top" title="Hello World">Next Post &rarr;</a>
+                        <li class="previous">
+                            <a href="/2019/02/17/Git知识体系/" data-toggle="tooltip" data-placement="top" title="Git知识体系">&larr; Previous Post</a>
                         </li>
+                    
                     
                 </ul>
 
@@ -261,6 +372,12 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
+                          <a class="tag" href="/tags/#Blog" title="Blog">Blog</a>
+                        
+                          <a class="tag" href="/tags/#Hexo" title="Hexo">Hexo</a>
+                        
+                          <a class="tag" href="/tags/#Github" title="Github">Github</a>
+                        
                     </div>
                 </section>
                 
@@ -271,14 +388,6 @@
                 <h5>FRIENDS</h5>
                 <ul class="list-inline">
 
-                    
-                        <li><a href="http://beantech.org" target="_blank">Bean Tech</a></li>
-                    
-                        <li><a href="http://blog.kaijun.rocks" target="_blank">Kaijun&#39;s Blog</a></li>
-                    
-                        <li><a href="http://huangxuan.me" target="_blank">Hux Blog</a></li>
-                    
-                        <li><a href="#" target="_blank">It Helps SEO</a></li>
                     
                 </ul>
                 
@@ -294,8 +403,8 @@
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = "your-disqus-ID";
-    var disqus_identifier = "http://yoursite-url/2019/02/16/Use-hexo-build-a-blog-system/";
-    var disqus_url = "http://yoursite-url/2019/02/16/Use-hexo-build-a-blog-system/";
+    var disqus_identifier = "https://wangjian890523.github.io/2019/02/16/Use-hexo-build-a-blog-system/";
+    var disqus_url = "https://wangjian890523.github.io/2019/02/16/Use-hexo-build-a-blog-system/";
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -342,6 +451,8 @@
     }
 </style>
 
+<script type="text/javascript" src="/js/zooming.js"></script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
 
     <!-- Footer -->
@@ -353,13 +464,31 @@
                 <ul class="list-inline text-center">
                 
                 
+                    <li>
+                        <a target="_blank" href="https://twitter.com/wangjian890523">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+                
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/wangjian890523">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
                 
 
                 
 
                 
                     <li>
-                        <a target="_blank" href="https://www.facebook.com/YenYuHsuan">
+                        <a target="_blank" href="https://www.facebook.com/wangjian890523">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
@@ -370,7 +499,7 @@
 
                 
                     <li>
-                        <a target="_blank" href="https://github.com/YenYuHsuan">
+                        <a target="_blank" href="https://github.com/wangjian890523">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-github fa-stack-1x fa-inverse"></i>
@@ -380,27 +509,28 @@
                 
 
                 
-                    <li>
-                        <a target="_blank" href="https://www.linkedin.com/in/yu-hsuan-yen">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                
 
                 </ul>
                 <p class="copyright text-muted">
-                    Copyright &copy; John Doe 2019 
-                    <br>
+                    Copyright &copy; eight-linepg 2019 
+				</p>
+				<p>
+					<!-- GoStats Simple HTML Based Code -->
+					<a target="_blank" title="流量统计站" href="http://gostats.cn"><img alt="流量统计站" src="http://monster.gostats.cn/bin/count/a_506694/t_7/i_3/z_0/show_hits/counter.png" style="border-width:0"></a>
+					<!-- End GoStats Simple HTML Based Code -->
+					<!-- 
                     Theme by <a href="http://huangxuan.me">Hux</a> 
                     <span style="display: inline-block; margin: 0 5px;">
                         <i class="fa fa-heart"></i>
                     </span> 
                     re-Ported by <a href="http://beantech.org">BeanTech</a> | 
-                    <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=YenYuHsuan&repo=hexo-theme-beantech&type=star&count=true">
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=YenYuHsuan&repo=hexo-theme-beantech&type=star&count=true" >
                     </iframe>
+					-->
+					<span class="post-count">751 words altogether</span>
                 </p>
             </div>
         </div>
@@ -452,7 +582,7 @@
 <script>
     // only load tagcloud.js in tag.html
     if($('#tag_cloud').length !== 0){
-        async("http://yoursite-url/js/jquery.tagcloud.js",function(){
+        async("https://wangjian890523.github.io/js/jquery.tagcloud.js",function(){
             $.fn.tagcloud.defaults = {
                 //size: {start: 1, end: 1, unit: 'em'},
                 color: {start: '#bbbbee', end: '#0085a1'},
@@ -497,14 +627,16 @@
 
 
 
-
-
 	<a id="rocket" href="#top" class=""></a>
 	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
     <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
 <!-- Image to hack wechat -->
-<img src="http://yoursite-url/img/icon_wechat.png" width="0" height="0" />
+<img src="https://wangjian890523.github.io/img/icon_wechat.png" width="0" height="0" />
 <!-- Migrate from head to bottom, no longer block render and still work -->
+
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/love.js"></script>
 
 </body>
 

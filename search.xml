@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Blog system function optimization]]></title>
+    <url>%2F2019%2F02%2F17%2FBlog-system-function-optimization%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[（一）redis之初见]]></title>
+    <url>%2F2019%2F02%2F17%2F%EF%BC%88%E4%B8%80%EF%BC%89redis%E4%B9%8B%E5%88%9D%E8%A7%81%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Git知识体系]]></title>
+    <url>%2F2019%2F02%2F17%2FGit%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB%2F</url>
+    <content type="text"><![CDATA[优秀的人，不是不合群，而是他们合群的人里面没有你]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Use hexo build a blog system]]></title>
+    <url>%2F2019%2F02%2F16%2FUse-hexo-build-a-blog-system%2F</url>
+    <content type="text"><![CDATA[主要内容 搭建自己好用省钱的博客环境，记录工作学习中的知识点。 简化从博客写作到本地展示的工作。 分成介绍，安装，使用，优化几个模块。 1.介绍 github + hexo github github就不用记录了 hexo Hexo是高效的静态站点生成框架，它基于Node.js, 通过Hexo。你可以直接使用Markdown语法来撰写博客。 2.安装步骤 2.1 github 配置流程 2.2 hexo 安装 2.3 基础插件 添加图片放大功能 使用zooming.js 实现图片的放大功能 zooming.js 文件放在blog\themes\beantech\source\js目录下。 打开blog\themes\beantech\layout\post.ejs，在最后添加代码。 1&lt;script type="text/javascript" src="/js/zooming.js"&gt;&lt;/script&gt; 然后文章里的图片就可以单击全屏了。 添加留言板 在blog\themes\beantech\layout中新建bbs.ejs, 文件内容如下： 123456789101112---layout: page---&lt;style type="text/css"&gt; header.intro-header&#123; background-position: right; &#125;&lt;/style&gt;&lt;!-- Chinese Version --&gt;&lt;div class="zh post-container"&gt; &lt;%- page.content %&gt;&lt;/div&gt; 在blog/source 中新建bbs文件夹，里面再新建index.md文件，内容如下： 123456789---layout: "bbs"title: "BBS"date: 2017-09-19 12:48:33description: "欢迎交换友链，一起交流学习！"header-img: "img/header_img/home-bg-2-dark.png"comments: true---此处替换为你的畅言评论代码~~~ 增加置顶功能 运行如下两条命令安装置顶插件 12npm uninstall hexo-generator-index --savenpm install hexo-generator-index-pin-top --save 添加代码到 blog\themes\beantech\layout\index.ejs, 如下位置添加代码： 12345&lt;% if (post.top) &#123;%&gt; &lt;i class="fa fa-thumb-tack"&gt;&lt;/i&gt; &lt;font color=7D26CD&gt;置顶&lt;/font&gt; &lt;span class="post-meta-divider"&gt;|&lt;/span&gt;&lt;%&#125;%&gt; 在想要置顶的文件md文件中，添加如下配置选项： 1top:true 添加网易云音乐BGM 听着音乐写作再好不过了，把网易搬到博客真的很不错。 网易云生成想听歌曲的外链。 1&lt;iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&amp;id=103730&amp;auto=1&amp;height=66"&gt;&lt;/iframe&gt; 效果图 现在可以愉快的工作了！！！ 添加访客人数和数字统计 3.使用 常用指令 hexo clean 删除本地静态文件（Public目录），可不执行 hexo g 生成本地静态文件（Public目录） hexo deploy 将本地静态文件推送至github（hexo d） step by step 4.优化 自定义Hexo new 生成的md 选项 在Blog\scaffolds\postd.md 文件中添加 12345678910111213---title: &#123;&#123; title &#125;&#125;subtitle:date: &#123;&#123; date &#125;&#125;author: &#123;&#123; author &#125;&#125; catalog: trueheader-img:tags:categories:top:copyright:--- top 置顶文章 tags 标签 copyright 版权 categories 分类 添加小红星 下载 love.js, 并把这个js 文件放到 Blog\themes\beantech\source\js 的这个目录下面。 修改themes 下配置文件Blog\themes\beantech\layout\layout.ejs如下： 效果展示： Heading 2]]></content>
+      <categories>
+        <category>环境搭建</category>
+      </categories>
+      <tags>
+        <tag>Blog</tag>
+        <tag>Hexo</tag>
+        <tag>Github</tag>
+      </tags>
+  </entry>
+</search>
